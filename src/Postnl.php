@@ -178,7 +178,7 @@ class Postnl
         $serie = null
     ) {
         // Validate $type parameter.
-        if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF', 'CV'])) {
+        if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF'])) {
             throw new Exceptions\InvalidBarcodeTypeException($type);
         }
 
@@ -374,11 +374,14 @@ class Postnl
 
                 // Assemble exception data from the response.
                 $exceptionData = [];
-                foreach ($exception->detail->CifException->Errors as $error) {
-                    $exceptionData[] = ComplexTypes\ExceptionData::create()
-                        ->setDescription($error->Description)
-                        ->setErrorMsg($error->ErrorMsg)
-                        ->setErrorNumber($error->ErrorNumber);
+                foreach ($exception->detail->CifException->Errors->ExceptionData as $error) {
+                    $exceptionDataa = ComplexTypes\ExceptionData::create();
+
+                    $exceptionDataa->setDescription($error->Description);
+                    $exceptionDataa->setErrorMsg($error->ErrorMsg);
+                    $exceptionDataa->setErrorNumber($error->ErrorNumber);
+
+                    $exceptionData[] = $exceptionDataa;
                 }
 
                 // Throw a CifException instead.
