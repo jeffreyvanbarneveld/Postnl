@@ -1,5 +1,5 @@
 {
-    "name": "ifresh/postnl",
+    "name": "NLiFresh/postnl",
     "description": "Library to connect to PostNL's SOAP service called CIF",
     "license": "GPL-2",
     "authors": [
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Freshi\\Postnl\\" : ["src/"]
+            "NLiFresh\\Postnl\\" : ["src/"]
         }
     }
 }
