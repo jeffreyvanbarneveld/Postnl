@@ -1,4 +1,4 @@
-<?php namespace DivideBV\Postnl;
+<?php namespace NLiFresh\Postnl;
 
 /**
  * Client class for CIF's barcode service.

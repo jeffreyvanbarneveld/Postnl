@@ -1,4 +1,4 @@
-<?php namespace DivideBV\Postnl\Exceptions;
+<?php namespace NLiFresh\Postnl\Exceptions;
 
 use Exception;
 

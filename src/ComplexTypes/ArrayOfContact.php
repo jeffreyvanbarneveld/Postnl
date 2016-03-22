@@ -1,4 +1,4 @@
-<?php namespace DivideBV\Postnl\ComplexTypes;
+<?php namespace NLiFresh\Postnl\ComplexTypes;
 
 class ArrayOfContact extends BaseArrayOfType
 {

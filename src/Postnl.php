@@ -1,4 +1,4 @@
-<?php namespace DivideBV\Postnl;
+<?php namespace NLiFresh\Postnl;
 
 use DOMDocument;
 use SoapFault;

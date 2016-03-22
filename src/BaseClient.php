@@ -1,4 +1,4 @@
-<?php namespace DivideBV\Postnl;
+<?php namespace NLiFresh\Postnl;
 
 use SoapClient;
 
@@ -56,7 +56,7 @@ abstract class BaseClient extends SoapClient
         $classmap = [];
 
         foreach ($this->classes as $class) {
-            $classmap[$class] = "DivideBV\\Postnl\\ComplexTypes\\{$class}";
+            $classmap[$class] = "NLiFresh\\Postnl\\ComplexTypes\\{$class}";
         }
 
         return $classmap;
